@@ -1,6 +1,6 @@
 # grunt-gpf-jscheck
 
-> Grunt plugin for gpf-jscheck
+> Grunt plugin for gpf-jscheck created by [Arnaud Buchholz](http://gpf-js.blogspot.fr/)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -17,19 +17,25 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-gpf-jscheck');
 ```
 
-## The "gpf_jscheck" task
+## The "gpfjscheck" task
 
 ### Overview
-In your project's Gruntfile, add a section named `gpf_jscheck` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `gpfjscheck` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  gpf_jscheck: {
+  gpfjscheck: {
     options: {
-      // Task-specific options go here.
+      verbose: false,
+      files: [
+        "test/scenarios/*.js"
+      ],
+      rules: [
+        "test/rules/*.js"
+      ]
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
+    jscheck: {
+      // You can leave it empty or add target-specific file lists and/or options
     },
   },
 });
@@ -37,7 +43,7 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.verbose
 Type: `String`
 Default value: `',  '`
 
