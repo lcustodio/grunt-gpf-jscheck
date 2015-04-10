@@ -40,6 +40,6 @@
     "gpf-jscheck": "0.0.1"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin", "gpf-jscheck"
   ]
 }
